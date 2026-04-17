@@ -29,16 +29,18 @@ namespace crmServer.DataAccess.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public void Update(T entity)
+        public async Task UpdateAsync(T entity)
         {
              _context.Set<T>().Update(entity);
-             _context.SaveChanges();
+             await _context.SaveChangesAsync();
         }
 
-        public void Delete(T entity)
+
+        public async Task DeleteAsync(T entity)
         {
             _context.Set<T>().Remove(entity);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
         }
+
     }
 }

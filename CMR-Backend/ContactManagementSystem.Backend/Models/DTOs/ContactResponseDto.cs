@@ -7,7 +7,7 @@
     public string City { get; set; }
     public string Country { get; set; }
 
-    public int EmployeeCount { get; set; }
+    public string? EmployeeCount { get; set; }
     public string Industry { get; set; }
 
     public string FirstName { get; set; }
